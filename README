@@ -1,1 +1,33 @@
 
+HLRF : Hybrid Random Forest Ensemble algorithm for Non-coding RNAs identification
+
+Web server is also available at http://bicep.kmutt.ac.th/HLRF
+
+
+Install
+-------
+- create a ne environment via conda file (heteromerpred27.yml)
+     "conda env create -n heteromerpred27 -f heteromerpred27.yml"
+     "conda activate heteromerpred27"
+     "cpanm Algorithm::Numerical::Shuffle"
+     
+- or install packages separately follows
+
+conda install -c conda-forge/label/cf201901 openjdk=8.0.192
+conda install -c bioconda viennarna
+conda install -c bioconda perl-bioperl
+conda install -c bioconda perl-statistics-basic
+conda install -c bioconda infernal
+cpanm Algorithm::Numerical::Shuffle
+
+- download tools from https://drive.google.com/file/d/13b-2qtUi3d9nBcy3gXrmJxpaE-26D9o1/view?usp=sharing
+  and extract in the same directory with HLRF
+
+Run example 
+-------
+[HLRF]$ perl HLRF_NcPred.pl user_input.fasta
+
+
+
+Citation
+- Lertampaiporn, S., Thammarongtham, C., Nukoolkit, C., Kaewkamnerdpong, B., & Ruengjitchatchawalya, M. (2014). Identification of non-coding RNAs with a new composite feature in the Hybrid Random Forest Ensemble algorithm. Nucleic acids research, 42(11), e93-e93.
